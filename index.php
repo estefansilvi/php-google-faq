@@ -1,4 +1,12 @@
 <?php
+  $navbar = [
+    "Indtroduzione" ,
+    "Norme sulla privacy",
+    "Termini di servizio",
+    "Tecnologie",
+    "Domande frequenti"
+  ];
+
   $domandeFrequenti = [
     [
       "question" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
@@ -21,20 +29,20 @@
     ],
     [
       "question" => "Perché il mio account è associato a un paese?",
-      "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:<br><br>
-
-      <ol><li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:</li><br><br>
-      <ol><li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li><br><br>
-      <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></ol><br><br>
-      <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol><br><br>
-      Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.
-
-      <h4>Stabilire il paese associato al tuo account</h4>
-      Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno.<br><br>
-
-      I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese.<br><br>
-
-      Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale.<a>Contattaci</a> se ritieni che il paese associato al tuo account sia sbagliato."
+      "answer"=>"Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
+      </br>
+      <ol>
+        <li> La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+          </br>
+          <ol class='alpha'>
+            <li> Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li></br>
+            <li> Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></br>
+          </ol>
+        </li></br>
+        <li> La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li>
+      </ol>
+      </br>
+      Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.",
     ],
     [
       "question" => "Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?",
@@ -42,7 +50,7 @@
     ],
     [
       "question" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
-      "answer" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell\'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all\' esatte parole chiave che hanno determinato il clic su un annuncio."
+      "answer" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."
     ],
 
   ];
@@ -53,29 +61,65 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/app.css">
+    <title>Domande frequenti </title>
   </head>
   <body>
 
-    <div class="container">
-      <?php
+    <div class="content">
+
+      <div class="content-navbar">
+        <div class="logo-title">
+          <img class="logo" src="img/logo.png" alt="">
+          <h4 class="title">Privacy e Termini</h4>
+        </div>
+        <div class="navbar-list">
+          <?php for($i = 0; $i < count($navbar); $i++) { ?>
+            <ul class="list">
+              <li><?php echo $navbar[$i] ?></li>
+            </ul>
+          <?php } ?>
+
+        </div>
+      </div>
+
+      <div class="content-page">
+        <?php
         foreach ($domandeFrequenti as $articolo) {
 
-      ?>
-      <h1>
-        <?php
-          echo $articolo['question'];
-        ?>
-      </h1>
-      <p>
-        <?php
-          echo $articolo['answer'];
-        ?>
-      </p>
+          ?>
+          <h1 class="question">
+            <?php
+            echo $articolo['question'];
+            ?>
+          </h1>
+          <p class="answer">
+            <?php
+            echo $articolo['answer'];
+            ?>
+          </p>
 
-      <?php
+          <?php
         }
-       ?>
+        ?>
+      </div>
+
+      <footer class="content-footer">
+        <div class="link-utili">
+            <ul class="elenco-links">
+                <li class="link">Google</li>
+                <li class="link">Tutto su Google</li>
+                <li class="link">Privacy</li>
+                <li class="link">Termini</li>
+            </ul>
+        </div>
+      </footer>
+
     </div>
 
 
