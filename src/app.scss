@@ -63,8 +63,9 @@
       padding-top: 15px;
       line-height: 25px;
 
-      .alpha li {
-        list-style: lower-alpha;
+      ol.alpha {
+        list-style-type:  lower-alpha;
+        margin-left: 15px;
       }
     }
   }

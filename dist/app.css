@@ -58,8 +58,9 @@
   padding-top: 15px;
   line-height: 25px;
 }
-.content-page .answer .alpha li {
-  list-style: lower-alpha;
+.content-page .answer ol.alpha {
+  list-style-type: lower-alpha;
+  margin-left: 15px;
 }
 .content-footer {
   width: 100%;
